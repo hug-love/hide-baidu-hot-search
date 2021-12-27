@@ -1,0 +1,18 @@
+{
+  "name": "gift",
+  "description": "隐藏百度热搜",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "gift.html",
+    "default_icon": "gift.png"
+  },
+  "host_permissions": ["https://www.baidu.com/"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.baidu.com/s?*"],
+      "css": ["my-styles.css"],
+      "js": ["content-script.js"]
+    }
+  ]
+}
